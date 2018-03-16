@@ -18,4 +18,8 @@ module.exports = function(sequelize, DataTypes) {
     });
 
   return User;
+
+
 };
+
+  console.log(User)
