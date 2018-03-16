@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/yangcs907/Group_Project_2/issues"
   },
-  "homepage": "https://github.com/yangcs907/Group_Project_2#readme"
+  "homepage": "https://github.com/yangcs907/Group_Project_2#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "mysql2": "^1.5.2",
+    "pat": "0.0.1",
+    "sequelize": "^4.37.1"
+  }
 }
