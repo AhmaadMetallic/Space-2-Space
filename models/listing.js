@@ -5,17 +5,20 @@ module.exports = function(sequelize, DataTypes) {
     politics: DataTypes.STRING,
 
     // video link
-    
+
   });
 
  Listings.associate = function(models) {
+
    
     Listings.belongsTo(models.User,{
+
+
        foreignKey: {
         allowNull: false
       }
-  
- 
+
+
     });
   };
   return Listings;
