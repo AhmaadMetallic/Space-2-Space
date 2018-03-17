@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Characteristic = sequelize.define("User", {
+  var Characteristic = sequelize.define("Characteristic", {
   	language: DataTypes.STRING,
   	religion: DataTypes.STRING,
     politics: DataTypes.STRING
@@ -8,15 +8,15 @@ module.exports = function(sequelize, DataTypes) {
   });
 
  Characteristic.associate = function(models) {
-    // Associating Author with Posts
-    // When an Author is deleted, also delete any associated Posts
-    User.belongsTo(models.User{
+
+    Characteristic.belongsTo(models.User,{
        foreignKey: {
         allowNull: false
       }
   
  
     });
-
+};
   return Characteristic;
+
 };

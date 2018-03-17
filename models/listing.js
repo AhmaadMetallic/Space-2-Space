@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Listings = sequelize.define("User", {
+  var Listings = sequelize.define("Listings", {
   	language: DataTypes.STRING,
   	religion: DataTypes.STRING,
     politics: DataTypes.STRING,
@@ -10,7 +10,7 @@ module.exports = function(sequelize, DataTypes) {
 
  Listings.associate = function(models) {
    
-    User.belongsTo(models.User,{
+    Listings.belongsTo(models.User,{
        foreignKey: {
         allowNull: false
       }
@@ -18,7 +18,7 @@ module.exports = function(sequelize, DataTypes) {
  
     });
   };
-  return listings;
+  return Listings;
 
 
 };
