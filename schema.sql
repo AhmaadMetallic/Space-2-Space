@@ -1,7 +1,9 @@
 -- Drops the todolist if it exists currently --
-DROP DATABASE IF EXISTS roomate;
+DROP DATABASE IF EXISTS roommate;
 -- Creates the "todolist" database --
 CREATE DATABASE roommate;
+
+USE roomate;
 
 -- Table one will be for the users. Columns will include 
 	-- First name
