@@ -9,7 +9,7 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	
+
 </head>
 <body>
 	<style type="text/css">
@@ -38,7 +38,9 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
+
         <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+
       </li>
       <li class="nav-item">
         <a class="nav-link" href="about.html">About</a>
@@ -66,29 +68,33 @@
     <form>
   <div class="form-group">
     <label for="exampleFormControlSelect1">Type of User</label>
-    <select class="form-control" id="exampleFormControlSelect1">
+    <select class="form-control" id="typeOfuser">
       <option>Host</option>
       <option>Applicant</option>
     </select>
   </div>
   <div class="form-group">
     <label for="exampleFormControlTextarea1">First Name</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+    <textarea class="form-control" id="firstName" rows="1"></textarea>
   </div>
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Last Name</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+    <textarea class="form-control" id="lastName" rows="1"></textarea>
   </div>
   <form>
   <div class="form-group">
     <label for="exampleFormControlFile1">Profile Picture</label>
+<<<<<<< HEAD
     <input type="file" class="form-control-file" id="fileupload">
   <div id="dvPreview"></div>
+=======
+    <input type="file" class="form-control-file" id="profilePic">
+>>>>>>> 48d5960f15cf117ed1dd3becab562b3b51044611
   </div>
 </form>
   <div class="form-group">
-    <label for="exampleFormControlTextarea1">Birthdate</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+    <label for="exampleFormControlTextarea1">Birthdate (MM/DD/YYYY)</label>
+    <textarea class="form-control" id="birthdate" rows="1"></textarea>
   </div>
   <div class="form-group">
   	<p>Gender</p>
@@ -103,15 +109,15 @@
 </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    <input type="email" class="form-control" id="email" placeholder="name@example.com">
   </div>
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Country of Origin </label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+    <textarea class="form-control" id="country" rows="1"></textarea>
   </div>
   <div class="form-group">
     <label for="exampleFormControlSelect1">Religion</label>
-    <select class="form-control" id="exampleFormControlSelect1">
+    <select class="form-control" id="religion">
       <option>Christianity</option>
       <option>Islam</option>
       <option>Judaism</option>
@@ -120,7 +126,7 @@
   </div>
   <div class="form-group">
     <label for="exampleFormControlSelect1">Laguages Spoken</label>
-    <select class="form-control" id="exampleFormControlSelect1">
+    <select class="form-control" id="languages">
       <option>English</option>
       <option>Spanish</option>
       <option>French</option>
@@ -131,17 +137,17 @@
 
   <div class="form-group">
     <label for="exampleFormControlSelect1">Length of Stay</label>
-    <select class="form-control" id="exampleFormControlSelect1">
+    <select class="form-control" id="length">
       <option>6 months</option>
       <option>12 months</option>
       <option>18 months</option>
       <option>24 months</option>
     </select>
   </div>
- 
+
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Introduction</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <textarea class="form-control" id="introduction" rows="3"></textarea>
   </div>
 </form>
     <a href="#" class="btn btn-primary">Create Profile</a>
@@ -149,6 +155,7 @@
 </div>
 
 
+<<<<<<< HEAD
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script language="javascript" type="text/javascript">
 $(function () {
@@ -179,6 +186,9 @@ $(function () {
     });
 });
 </script>
+=======
+
+>>>>>>> 48d5960f15cf117ed1dd3becab562b3b51044611
 
 </body>
 </html>

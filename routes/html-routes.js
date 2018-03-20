@@ -6,11 +6,19 @@ var path = require("path");
 module.exports = function(app) {
 
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/home.html"));
+    res.sendFile(path.join(__dirname, "../public/index.html"));
   });
   // below are templates for further html routes
-  app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/"))
+  app.get("/profiles", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/profiles.html"))
+  });
+
+  app.get("/about", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/about.html"))
+  });
+
+  app.get("/login", function(req, res) {
+    res.sendFile(path.join(__dirname, ".. /public/login.html"))
   });
 
 };
