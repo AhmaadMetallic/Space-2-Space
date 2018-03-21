@@ -1,4 +1,3 @@
-$(document).ready(function() {
   var userType = $("#typeOfuser").val().trim();
   var firstName = $("#firstName").val().trim();
   var lastName = $("#lastName").val().trim();
@@ -11,35 +10,33 @@ $(document).ready(function() {
   var lengthOfstay = $("#length").val().trim();
   var introduction = $("#introduction").val().trim();
 
+  $(".btn-primary").on("click", function(event) {
+      event.preventDefault();
+  console.log(firstName);
+  console.log(lastName);
+  console.log(emailAddress);
   var newUser = {
-    typeofuser: userType.val().trim(),
-  	firstname: firstName.val().trim(),
-    lastname: lastName.val().trim(),
-    profilepicture: profilePic.val().trim(),
-    birthdate: birthdate.val().trim(),
+    typeofuser: userType,
+  	firstname: firstName,
+    lastname: lastName,
+    profilepicture: profilePic,
+    birthdate: birthdate,
     // gender: req.body.
-    emailaddress: emailAddress.val().trim(),
-    country: country.val().trim(),
-    religion: religion.val().trim(),
-    language: languages.val().trim(),
-    length: lengthOfstay.val().trim(),
-    introduction: introduction.val().trim()
+    emailaddress: emailAddress,
+    country: country,
+    religion: religion,
+    language: languages,
+    length: lengthOfstay,
+    introduction: introduction
     };
 
   console.log(newUser);
 
-  app.post("/api/add", function(req, res) {
-    db.Post.create(req.body).then(function(dbUser) {
-      res.json(dbUser);
-      deleteInput();
-    });
-  });
+  //submitForm(newUser);
 
-  //$.post("/api/add", newUser)
-    //.then(function(data) {
-      //console.log(data);
-      //alert("Adding user...");
-    var deleteInput = function() {
+
+
+    function deleteInput() {
     $("#typeOfuser").val("").trim();
     $("#firstName").val("").trim();
     $("#lastName").val("").trim();
@@ -53,3 +50,9 @@ $(document).ready(function() {
     $("#introduction").val("");
     };
 });
+
+function submitForm(user) {
+$.post("/api/add", user, function() {
+    window.location.href = "/user-profile";
+  });
+};
