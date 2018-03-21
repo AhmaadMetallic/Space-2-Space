@@ -28,13 +28,11 @@ $(document).ready(function() {
 
   console.log(newUser);
 
-  $.post("/api/add")
-
-  function submitForm(User) {
-    $.post("/api/add/", User, function() {
-      window.location.href = "/my-profile";
+  app.post("/api/add", function(req, res) {
+    db.Post.create(req.body).then(function(dbUser) {
+      res.json(dbUser);
     });
-  };
+  });
 
   $.post("/api/add", newUser)
     .then(function(data) {
