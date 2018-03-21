@@ -28,5 +28,29 @@ $(document).ready(function() {
 
   console.log(newUser);
 
+  $.post("/api/add")
+
+  function submitForm(User) {
+    $.post("/api/add/", User, function() {
+      window.location.href = "/my-profile";
+    });
+  };
+
   $.post("/api/add", newUser)
+    .then(function(data) {
+      console.log(data);
+      alert("Adding user...");
+      $("#typeOfuser").val("").trim();
+      $("#firstName").val("").trim();
+      $("#lastName").val("").trim();
+      $("#profilePic").val("").trim();
+      $("#birthdate").val("").trim();
+      $("#email").val("");
+      $("#country").val("");
+      $("#religion").val("");
+      $("#languages").val("");
+      $("#length").val("");
+      $("#introduction").val("");
+
+    });
 });
