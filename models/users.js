@@ -4,13 +4,13 @@ module.exports = function(sequelize, DataTypes) {
   	firstname: DataTypes.STRING,
     lastname: DataTypes.STRING,
     profilepicture: DataTypes.STRING,
-    birthdate: DataTypes.NUMBER,
+    birthdate: DataTypes.DATEONLY,
     gender: DataTypes.STRING,
     emailaddress: DataTypes.STRING,
     country: DataTypes.STRING,
     religion: DataTypes.STRING,
     language: DataTypes.STRING,
-    length: DataTypes.STRING,
+    staylength: DataTypes.STRING,
     introduction: DataTypes.STRING
   });
 
