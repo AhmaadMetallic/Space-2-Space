@@ -28,5 +28,28 @@ $(document).ready(function() {
 
   console.log(newUser);
 
-  $.post("/api/add", newUser)
+  app.post("/api/add", function(req, res) {
+    db.Post.create(req.body).then(function(dbUser) {
+      res.json(dbUser);
+      deleteInput();
+    });
+  });
+
+  //$.post("/api/add", newUser)
+    //.then(function(data) {
+      //console.log(data);
+      //alert("Adding user...");
+    var deleteInput = function() {
+    $("#typeOfuser").val("").trim();
+    $("#firstName").val("").trim();
+    $("#lastName").val("").trim();
+    $("#profilePic").val("").trim();
+    $("#birthdate").val("").trim();
+    $("#email").val("");
+    $("#country").val("");
+    $("#religion").val("");
+    $("#languages").val("");
+    $("#length").val("");
+    $("#introduction").val("");
+    };
 });

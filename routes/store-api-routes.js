@@ -6,7 +6,7 @@ module.exports = function(app) {
 
   app.post("/api/add", function(req, res) {
   console.log(req.body);
-  db.Listings.create({
+  db.User.create({
     typeofuser: req.body.userType,
   	firstname: req.body.firstName,
     lastname: req.body.lastName,
@@ -37,5 +37,9 @@ module.exports = function(app) {
       res.json(dbUser);
     });
   });
+
+  app.get("/api/results", function(req, res) {
+    
+  })
 
 };
