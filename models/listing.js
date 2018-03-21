@@ -10,7 +10,7 @@ module.exports = function(sequelize, DataTypes) {
 
  Listings.associate = function(models) {
 
-   
+
     Listings.belongsTo(models.User,{
 
 
