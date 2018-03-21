@@ -11,20 +11,10 @@ module.exports = function(sequelize, DataTypes) {
     religion: DataTypes.STRING,
     language: DataTypes.STRING,
     length: DataTypes.STRING,
-    intriduction: DataTypes.STRING
+    introduction: DataTypes.STRING
   });
 
- User.associate = function(models) {
 
-    User.hasMany(models.Listings, {
-      onDelete: "cascade"
-    });
-
-  	User.hasMany(models.Characteristic, {
-      onDelete: "cascade"
-    });
-
-};
   return User;
 
 
