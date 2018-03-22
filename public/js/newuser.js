@@ -18,9 +18,9 @@
     typeofuser: $("#typeOfuser").val().trim(),
   	firstname: $("#firstName").val().trim(),
     lastname: $("#lastName").val().trim(),
-    //profilepicture: profilePic,
+    profilepicture: $("#picture").val().trim(),
     birthdate: $("#birthdate").val().trim(),
-    // gender: req.body.
+    gender: $("#gender").val().trim(),
     emailaddress: $("#birthdate").val().trim(),
     country: $("#country").val().trim(),
     school: $("#school").val().trim(),
