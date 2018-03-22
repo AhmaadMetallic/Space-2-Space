@@ -13,6 +13,7 @@
 
   $(".btn-primary").on("click", function(event) {
       event.preventDefault();
+
   var newUser = {
     typeofuser: $("#typeOfuser").val().trim(),
   	firstname: $("#firstName").val().trim(),
@@ -29,10 +30,11 @@
     introduction: $("#introduction").val().trim()
     };
 
-  console.log(newUser);
+    var currentUserName = newUser.firstname + " " + newUser.lastname;
+    console.log(currentUserName);
+    console.log(newUser);
 
-  submitForm(newUser);
-
+  //submitForm(newUser);
 
     function deleteInput() {
     $("#typeOfuser").val("").trim();
