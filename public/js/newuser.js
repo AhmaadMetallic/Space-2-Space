@@ -34,7 +34,7 @@
     console.log(currentUserName);
     console.log(newUser);
 
-  //submitForm(newUser);
+    submitForm(newUser);
 
     function deleteInput() {
     $("#typeOfuser").val("").trim();
