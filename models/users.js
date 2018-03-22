@@ -8,6 +8,7 @@ module.exports = function(sequelize, DataTypes) {
     gender: DataTypes.STRING,
     emailaddress: DataTypes.STRING,
     country: DataTypes.STRING,
+    school: DataTypes.STRING,
     religion: DataTypes.STRING,
     language: DataTypes.STRING,
     staylength: DataTypes.STRING,

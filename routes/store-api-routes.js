@@ -15,6 +15,7 @@ module.exports = function(app) {
     // gender: req.body.
     emailaddress: req.body.emailAddress,
     country: req.body.country,
+    school: req.body.school,
     religion: req.body.religion,
     language: req.body.languages,
     length: req.body.lengthOfstay,
