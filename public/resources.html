@@ -22,10 +22,22 @@
 			margin-bottom: 50px;
 		}
 		.card-header{
-			font-size: 30px;
+			/*font-size: 30px;*/
+		}
+		form{
+			position: relative;
+			float: right;
+			
 		}
 		.row{
 			margin-top: 20px;
+		}
+
+		.card{
+			width:90%;
+			position: relative;
+			margin: auto;
+			margin-top: 70px
 		}
 
        #map {
@@ -33,7 +45,7 @@
         width: 75%;
         position: relative;
         margin:auto;
-        margin-top: 80px;
+        margin-top: 10px;
         }
 	</style>
 	<!--Nav Bar-->
@@ -68,12 +80,20 @@
   </div>
 </nav>
 
-<div id="map"></div>
+
+<div class="card">
+  <div class="card-header">
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</div>
+  <div id="map"></div>
+</div>
+
+
+
     <script>
-      // Note: This example requires that you consent to location sharing when
-      // prompted by your browser. If you see the error "The Geolocation service
-      // failed.", it means you probably did not give permission for the browser to
-      // locate you.
       var map, infoWindow;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
