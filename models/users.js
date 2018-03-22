@@ -1,3 +1,4 @@
+var Sequelize = require("sequelize");
 module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define("User", {
   	typeofuser: DataTypes.STRING,
@@ -13,8 +14,7 @@ module.exports = function(sequelize, DataTypes) {
     language: DataTypes.STRING,
     staylength: DataTypes.STRING,
     introduction: DataTypes.STRING
-  });
-
+});
 
   return User;
 

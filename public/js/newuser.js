@@ -18,9 +18,9 @@
     typeofuser: $("#typeOfuser").val().trim(),
   	firstname: $("#firstName").val().trim(),
     lastname: $("#lastName").val().trim(),
-    //profilepicture: profilePic,
+    profilepicture: $("#picture").val().trim(),
     birthdate: $("#birthdate").val().trim(),
-    // gender: req.body.
+    gender: $("#gender").val().trim(),
     emailaddress: $("#birthdate").val().trim(),
     country: $("#country").val().trim(),
     school: $("#school").val().trim(),
@@ -34,7 +34,11 @@
     console.log(currentUserName);
     console.log(newUser);
 
+<<<<<<< HEAD
   submitForm(newUser);
+=======
+    submitForm(newUser);
+>>>>>>> b45948227e81cfa632e69721d18e4b013b1cc220
 
     function deleteInput() {
     $("#typeOfuser").val("").trim();
