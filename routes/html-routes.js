@@ -37,9 +37,9 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/resources.html"))
   });
 
-  app.get("/api/:id", function(req,res) {
-    res.sendFile(path.join(__dirname, "../public/view-profile.html"))
-  });
+  // app.get("/api/:id", function(req,res) {
+  //   res.sendFile(path.join(__dirname, "../public/view-profile.html"))
+  // });
 
 
 
