@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Space2Space|LOGIN</title>
-	<!--Links-->
+	<title>Space2Space|My Profile</title>
+	<!--links-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -12,48 +12,50 @@
 </head>
 <body>
 	<style type="text/css">
-		body{
-			background-color: #e6e6e6;
-		}
-		form{
-			width: 50%;
-			position: relative;
-			margin: auto;
-		}
-		.card{
-			width:75%;
-			position: relative;
-			margin: auto;
-			margin-top: 10%;
-		}
+	.card{
+		width: 75%;
+		position: relative;
+		margin: auto;
+	}
+	.container{
+		position: relative;
+		margin: auto;
+	}
+	.left{
+		position: relative;
+		display: inline;
+		float: left;
+	}
 
-		.card-header{
-			background-color: #9be694;
-		}
-		button{
-			margin-bottom: 10px;
+	.right{
+		position: relative;
+		display: inline;
+	}
 
-		}
+.list{
+	position: relative;
+	margin: auto;
+}
 
+		
 	</style>
 
-	<!--Nav Bar-->
-<nav class="navbar navbar-light" style="background-color: #9be694;">
+	<nav class="navbar navbar-light" style="background-color: #9be694;">
   <a class="navbar-brand" href="#"><img src="assets/images/Space2Space-logo.png" style=" width:196.56px; height: 52px"></a>
  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+ <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-       <li class="nav-item active">
+      <li class="nav-item active">
         <a class="nav-link" href="/">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/about">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/login">Login<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/login">Login</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/sign-up">Create a Profile</a>
@@ -62,37 +64,49 @@
         <a class="nav-link" href="">My Profile</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/profiles">Available RoomMates</a>
+        <a class="nav-link" href="/profiles">Available RoomMates<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/resources">Resources</a>
       </li>
       </ul>
-  </div>
 </nav>
 
-<!--Login form-->
-	<div class="card">
-  <h5 class="card-header"><img src="assets/images/Space2Space-logo.png" alt="Smiley face" height="52" width="196.56">       |LOGIN</h5>
-  <div class="card-body">
-<form>
-    <div class="form-group">
-    <label for="exampleInputEmail1">Email</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="SSShhh!!!">
-  </div>
-  <button type="submit" class="btn btn-primary">LOGIN</button>
-   <p>Not a Space2Space User?<a href="#"> Create a Profile!</a></p>
-</form>
+<!--Profile Card-->  
 
+<div class="card text-center">
+  <div class="card-header">
+    My Profile
+  </div>
+    <div class="card-body">
+   <div class="container">
+    <div class="left">
+    <img src="..." alt="..." class="img-thumbnail">
+	</div>
+    <div class="right">
+    <h5 class="card-title">Guest Name goes here</h5>
+    <p class="card-text" id="introduction">Introduction goes here</p>
+	</div>
+</div>
+<div class="list">
+  <ul class="list-group list-group-flush">
+  	<li class="list-group-item" id="typeOfuser">Type of User:</li>
+    <li class="list-group-item" id="firstName">First Name:</li>
+    <li class="list-group-item" id="lastName">Last Name:</li>
+    <li class="list-group-item" id="birthdate">Birthdate:</li>
+    <li class="list-group-item" id="gender">Gender:</li>
+    <li class="list-group-item" id="email">Email:</li>
+    <li class="list-group-item" id="country">Country:</li>
+    <li class="list-group-item" id="school">School:</li>
+    <li class="list-group-item" id="religion">Religion:</li>
+    <li class="list-group-item" id="languages">Language(s) Spoken:</li>
+    <li class="list-group-item" id="country">Length of Stay:</li>
+   
+  </ul>
+    <a href="#" class="btn btn-primary">Edit Profile</a>
+</div>
   </div>
 </div>
-
-
 
 </body>
 </html>

@@ -21,7 +21,7 @@
     profilepicture: $("#picture").val().trim(),
     birthdate: $("#birthdate").val().trim(),
     gender: $("#gender").val().trim(),
-    emailaddress: $("#birthdate").val().trim(),
+    emailaddress: $("#email").val().trim(),
     country: $("#country").val().trim(),
     school: $("#school").val().trim(),
     religion: $("#religion").val().trim(),
@@ -46,12 +46,13 @@
     $("#lastName").val("").trim();
     $("#profilePic").val("").trim();
     $("#birthdate").val("").trim();
-    $("#email").val("");
-    $("#country").val("");
-    $("#religion").val("");
-    $("#languages").val("");
-    $("#length").val("");
-    $("#introduction").val("");
+    $("#email").val("").trim();
+    $("#country").val("").trim();
+    $("#school").val("").trim();
+    $("#religion").val("").trim();
+    $("#languages").val("").trim();
+    $("#length").val("").trim();
+    $("#introduction").val("").trim();
     };
 });
 
