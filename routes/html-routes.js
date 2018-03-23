@@ -29,8 +29,18 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/user-profile.html"))
   });
 
+  app.get("/my-profile", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/my-profile.html"))
+  });
+
   app.get("/resources", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/resources.html"))
   });
+
+  app.get("/api/:id", function(req,res) {
+    res.sendFile(path.join(__dirname, "../public/view-profile.html"))
+  });
+
+
 
 };

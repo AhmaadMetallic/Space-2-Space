@@ -6,8 +6,8 @@
 <!--links-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <style>
       .card {
@@ -46,7 +46,7 @@
         <a class="nav-link" href="/sign-up">Create a Profile</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="">My Profile</a>
+        <a class="nav-link" href="/my-profile">My Profile</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/profiles">Available RoomMates<span class="sr-only">(current)</span></a>
@@ -55,111 +55,100 @@
         <a class="nav-link" href="/resources">Resources</a>
       </li>
       </ul>
-
-
 </nav>
 <h3 style="text-align: center;">Your Matches</h3>
 <!--Profile Cards-->
 <div id="card-div">
   <div class="card-deck">
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="assets/images/profile-images/pexels-photo-253758.jpeg" alt="Card image cap">
+    <div class="card" id="card1" style="width: 18rem;">
       <div class="card-body">
-        <h5 class="card-title" id="name">Vladia Vadim</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <h5 class="card-title" id="name1"></h5>
+				<h2 id="type1"></h2>
+        <p class="card-text" id="intro1"></p>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item" id ="language">Language: Cantonese</li>
-        <li class="list-group-item" id="country">Native Country: China</li>
-        <li class="list-group-item" id="religion">Religion: Buddhism</li>
+        <li class="list-group-item" id="language1"></li>
+        <li class="list-group-item" id="country1"></li>
+        <li class="list-group-item" id="religion1"></li>
       </ul>
-      <div class="card-body">
-        <a href="#" class="btn btn-primary">SEND REQUEST</a>
+      <div class="card-body" id="button1">
       </div>
     </div>
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="assets/images/profile-images/pexels-photo-324658.jpeg" alt="Card image cap">
+		<div class="card" id="card2" style="width: 18rem;">
       <div class="card-body">
-        <h5 class="card-title">Nikita Ivanov</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <h5 class="card-title" id="name2"></h5>
+				<h2 id="type2"></h2>
+        <p class="card-text" id="intro2"></p>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item" id ="language">Language: Russia</li>
-        <li class="list-group-item" id="country">Native Country: Russian</li>
-        <li class="list-group-item" id="religion">Religion: Agnostic</li>
+        <li class="list-group-item" id="language2"></li>
+        <li class="list-group-item" id="country2"></li>
+        <li class="list-group-item" id="religion2"></li>
       </ul>
-      <div class="card-body">
-        <a href="#" class="btn btn-primary">SEND REQUEST</a>
+      <div class="card-body" id="button2">
       </div>
     </div>
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="assets/images/profile-images/pexels-photo-428341.jpeg" alt="Card image cap">
+		<div class="card" id="card3" style="width: 18rem;">
       <div class="card-body">
-        <h5 class="card-title">Dalir Najafi</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <h5 class="card-title" id="name3"></h5>
+				<h2 id="type3"></h2>
+        <p class="card-text" id="intro3"></p>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item" id ="language">Language: Cantonese</li>
-        <li class="list-group-item" id="country">Native Country: China</li>
-        <li class="list-group-item" id="religion">Religion: Buddhism</li>
+        <li class="list-group-item" id="language3"></li>
+        <li class="list-group-item" id="country3"></li>
+        <li class="list-group-item" id="religion3"></li>
       </ul>
-      <div class="card-body">
-        <a href="#" class="btn btn-primary">SEND REQUEST</a>
+      <div class="card-body" id="button3">
       </div>
     </div>
-  </div>
-</div>
-    <!--next row-->
-<div id="card-div">
-  <div class="card-deck">
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="assets/images/profile-images/pexels-photo-462680.jpeg" alt="Card image cap">
+		<div class="card" id="card4" style="width: 18rem;">
       <div class="card-body">
-        <h5 class="card-title">Uche Adebayo</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <h5 class="card-title" id="name4"></h5>
+				<h2 id="type4"></h2>
+        <p class="card-text" id="intro4"></p>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item" id ="language">Language: Cantonese</li>
-        <li class="list-group-item" id="country">Native Country: China</li>
-        <li class="list-group-item" id="religion">Religion: Buddhism</li>
+        <li class="list-group-item" id="language4"></li>
+        <li class="list-group-item" id="country4"></li>
+        <li class="list-group-item" id="religion4"></li>
       </ul>
-      <div class="card-body">
-        <a href="#" class="btn btn-primary">SEND REQUEST</a>
+      <div class="card-body" id="button4">
       </div>
     </div>
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="assets/images/profile-images/pexels-photo-818819.jpeg" alt="Card image cap">
+		<div class="card" id="card5" style="width: 18rem;">
       <div class="card-body">
-        <h5 class="card-title">Zoya Akachi</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <h5 class="card-title" id="name5"></h5>
+				<h2 id="type5"></h2>
+        <p class="card-text" id="intro5"></p>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item" id ="language">Language: Cantonese</li>
-        <li class="list-group-item" id="country">Native Country: China</li>
-        <li class="list-group-item" id="religion">Religion: Buddhism</li>
+        <li class="list-group-item" id="language5"></li>
+        <li class="list-group-item" id="country5"></li>
+        <li class="list-group-item" id="religion5"></li>
       </ul>
-      <div class="card-body">
-        <a href="#" class="btn btn-primary">SEND REQUEST</a>
+      <div class="card-body" id="button5">
       </div>
     </div>
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="assets/images/profile-images/pexels-photo-91227.jpeg" alt="Card image cap">
+		<div class="card" id="card6" style="width: 18rem;">
       <div class="card-body">
-        <h5 class="card-title">Harry Williams</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <h5 class="card-title" id="name6"></h5>
+				<h2 id="type6"></h2>
+        <p class="card-text" id="intro6"></p>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item" id ="language">Language: Cantonese</li>
-        <li class="list-group-item" id="country">Native Country: China</li>
-        <li class="list-group-item" id="religion">Religion: Buddhism</li>
+        <li class="list-group-item" id="language6"></li>
+        <li class="list-group-item" id="country6"></li>
+        <li class="list-group-item" id="religion6"></li>
       </ul>
-      <div class="card-body">
-        <a href="#" class="btn btn-primary">SEND REQUEST</a>
+      <div class="card-body" id="button6">
       </div>
     </div>
   </div>
 </div>
 
 </div>
+
+<script type="text/javascript" src="js/matches.js"></script>
 </body>
 </html>

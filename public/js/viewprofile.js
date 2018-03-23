@@ -1,13 +1,14 @@
 $(document).ready(function() {
-    $.get("/api/getcurrent", function(data) {
-      currentUserObject = {};
-      currentUserObject = data;
-      console.log(currentUserObject);
-      renderUserData(data);
+    $.get("/api/:id", function(data) {
+      id: req.params.id
+      currentViewObject = {};
+      currentViewObject = data;
+      console.log(currentViewObject);
+      renderViewData(data);
     });
 
 
-function renderUserData(data) {
+function renderViewrData(data) {
   var userName = data[0].firstname + " " + data[0].lastname;
   $(".card-header").empty();
   $("#userName").append(userName);
@@ -25,14 +26,3 @@ function renderUserData(data) {
   $("#staylength").append("Stay Length(if traveling): " + data[0].staylength);
   $(".left").append('<img src= " ' + data[0].profilepicture + ' " class="img-thumbnail" />');
 };
-
-
-
-
-
-
-
-
-
-
-});

@@ -1,16 +1,3 @@
-  // var userType = $("#typeOfuser").val().trim();
-  // var firstName = $("#firstName").val().trim();
-  // var lastName = $("#lastName").val().trim();
-  // //var profilePic = $("#profilePic").val().trim();
-  // var birthdate = $("#birthdate").val().trim();
-  // var emailAddress = $("#email").val().trim();
-  // var country = $("#country").val().trim();
-  // var school = $("#school").val().trim();
-  // var religion = $("#religion").val().trim();
-  // var languages = $("#languages").val().trim();
-  // var lengthOfstay = $("#length").val().trim();
-  // var introduction = $("#introduction").val().trim();
-
   $(".btn-primary").on("click", function(event) {
       event.preventDefault();
 
@@ -18,7 +5,7 @@
     typeofuser: $("#typeOfuser").val().trim(),
   	firstname: $("#firstName").val().trim(),
     lastname: $("#lastName").val().trim(),
-    //profilepicture: $("#picture").val().trim(),
+    profilepicture: $("#picture").val().trim(),
     birthdate: $("#birthdate").val().trim(),
     gender: $("#gender").val().trim(),
     emailaddress: $("#email").val().trim(),
@@ -30,14 +17,13 @@
     introduction: $("#introduction").val().trim()
     };
 
-    //module.exports = newUser;
 
     var currentUserName = newUser.firstname + " " + newUser.lastname;
     console.log(currentUserName);
     console.log(newUser);
 
+    submitCurrentUser(newUser);
     submitForm(newUser);
-
 
     function deleteInput() {
     $("#typeOfuser").val("").trim();
@@ -57,6 +43,11 @@
 
 function submitForm(user) {
 $.post("/api/add", user, function() {
-    window.location.href = "/user-profile";
+    window.location.href = "/my-profile";
+  });
+};
+
+function submitCurrentUser(user) {
+  $.post("/api/currentUser", user, function() {
   });
 };
