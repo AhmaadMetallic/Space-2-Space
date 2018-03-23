@@ -18,7 +18,7 @@
     typeofuser: $("#typeOfuser").val().trim(),
   	firstname: $("#firstName").val().trim(),
     lastname: $("#lastName").val().trim(),
-    profilepicture: $("#picture").val().trim(),
+    //profilepicture: $("#picture").val().trim(),
     birthdate: $("#birthdate").val().trim(),
     gender: $("#gender").val().trim(),
     emailaddress: $("#birthdate").val().trim(),
@@ -30,15 +30,14 @@
     introduction: $("#introduction").val().trim()
     };
 
+    //module.exports = newUser;
+
     var currentUserName = newUser.firstname + " " + newUser.lastname;
     console.log(currentUserName);
     console.log(newUser);
 
-<<<<<<< HEAD
-  submitForm(newUser);
-=======
     submitForm(newUser);
->>>>>>> b45948227e81cfa632e69721d18e4b013b1cc220
+
 
     function deleteInput() {
     $("#typeOfuser").val("").trim();
