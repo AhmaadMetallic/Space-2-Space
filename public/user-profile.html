@@ -147,8 +147,8 @@
   </div>
   <form>
   <div class="form-group">
-    <label for="exampleFormControlFile1">Profile Picture</label>
-    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+    <label for="addLink">Add Link to Profile Picture</label>
+    <textarea class="form-control" id="addLink" rows="1"></textarea>
   </div>
 </form>
   <div class="form-group">
@@ -156,16 +156,13 @@
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
   </div>
   <div class="form-group">
-    <p>Gender</p>
-  <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-  <label class="form-check-label" for="inlineCheckbox1">Male</label>
-</div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-  <label class="form-check-label" for="inlineCheckbox2">Female</label>
-</div>
-</div>
+    <label for="gender">Gender</label>
+    <select class="form-control" id="gender">
+      <option selected>Choose...</option>
+      <option>Female</option>
+      <option>Male</option>
+    </select>
+  </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Email address</label>
     <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
@@ -181,6 +178,7 @@
   <div class="form-group">
     <label for="exampleFormControlSelect1">Religion (optional)</label>
     <select class="form-control" id="exampleFormControlSelect1">
+      <option selected>Choose...</option>
       <option>Christianity</option>
       <option>Islam</option>
       <option>Judaism</option>
@@ -190,6 +188,7 @@
   <div class="form-group">
     <label for="exampleFormControlSelect1">Laguages Spoken</label>
     <select class="form-control" id="exampleFormControlSelect1">
+      <option selected>Choose...</option>
       <option>English</option>
       <option>Spanish</option>
       <option>French</option>
@@ -201,6 +200,7 @@
   <div class="form-group">
     <label for="exampleFormControlSelect1">Length of Stay</label>
     <select class="form-control" id="exampleFormControlSelect1">
+      <option selected>Choose...</option>
       <option>6 months</option>
       <option>12 months</option>
       <option>18 months</option>
