@@ -72,7 +72,7 @@ module.exports = function(app) {
         res.json(dbUser);
       });
   });
-};
+
 
 
   app.get("/api/getcurrent", function(req, res) {
