@@ -1,4 +1,4 @@
-$("#editProfile").on("click", function(event) {
+$(".btn-primary").on("click", function(event) {
     event.preventDefault();
 
 var editUser = {
@@ -10,7 +10,6 @@ var editUser = {
   gender: $("#gender").val().trim(),
   emailaddress: $("#email").val().trim(),
   country: $("#country").val().trim(),
-  school: $("#school").val().trim(),
   religion: $("#religion").val().trim(),
   language: $("#languages").val().trim(),
   staylength: $("#length").val().trim(),

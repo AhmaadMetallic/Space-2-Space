@@ -49,7 +49,7 @@ module.exports = function(app) {
   });
 
 
-  app.put("/api/currentUser", function(req, res){
+  app.put("/api/editCurrentUser", function(req, res){
     db.currentUser.update(
       req.body,
       {

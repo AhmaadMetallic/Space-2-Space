@@ -39,7 +39,11 @@ module.exports = function(app) {
 
   app.get("/search-profiles", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/search-profiles.html"))
-  })
+  });
+
+  app.get("/edit-profile", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/edit-profile.html"))
+  });
 
   // app.get("/api/:id", function(req,res) {
   //   res.sendFile(path.join(__dirname, "../public/view-profile.html"))

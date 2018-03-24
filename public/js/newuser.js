@@ -10,7 +10,6 @@
     gender: $("#gender").val().trim(),
     emailaddress: $("#email").val().trim(),
     country: $("#country").val().trim(),
-    school: $("#school").val().trim(),
     religion: $("#religion").val().trim(),
     language: $("#languages").val().trim(),
     staylength: $("#length").val().trim(),
