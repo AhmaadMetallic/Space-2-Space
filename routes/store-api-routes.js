@@ -95,12 +95,15 @@ module.exports = function(app) {
         });
     });
 
-    app.get("/api/match/:country/:religion/:language", function(req, res) {
+    app.get("/api/match/:country/:religion/:language/:id", function(req, res) {
           db.User.findAll({
             where: {
               country: req.params.country,
               religion: req.params.religion,
-              language: req.params.language
+              language: req.params.language,
+              id: {
+                $ne: req.params.id
+              }
             }
           }).then(function(results) {
             res.json(results);
