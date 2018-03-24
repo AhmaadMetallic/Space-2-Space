@@ -29,17 +29,15 @@ function renderViewData(data) {
 
 //below is code for modal that pops up when "contact" is clicked
 
-$("").on("click", function(event) {
+$("#sendEmail").on("click", function(event) {
   event.preventDefault();
   $.get("/api/getcurrent", function(data) {
-    var userName = data[0].firstname + " " + data[0].lastname;
-    $("#username").append(userName);
+    var matchEmail = data[0].email;
+    $("#matchEmail").append(matchEmail);
     var message = $("#message").val().trim();
-    var contact = $("#contact").val().trim();
     var sentMessage = {
-      name: userName,
+      matchEmail: matchEmail,
       message: message,
-      contact: contact
     };
   });
 });
