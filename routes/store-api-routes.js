@@ -20,7 +20,7 @@ module.exports = function(app) {
     language: req.body.language,
     staylength: req.body.staylength,
     introduction: req.body.introduction
-  }) 
+  })
   .then(function(dbUser) {
     res.json(dbUser);
   });
@@ -48,7 +48,7 @@ module.exports = function(app) {
     });
   });
 
-  app.put("/api/currentUser", function(req.res){
+  app.put("/api/currentUser", function(req, res){
     db.currentUser.update(
       req.body,
       {
