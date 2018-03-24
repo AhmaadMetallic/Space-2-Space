@@ -48,11 +48,8 @@ module.exports = function(app) {
     });
   });
 
-<<<<<<< HEAD
-  app.put("/api/currentUser", function(req,res){
-=======
+
   app.put("/api/currentUser", function(req, res){
->>>>>>> 2b6399ad83c677f38d4b49728dfec82275ac75c9
     db.currentUser.update(
       req.body,
       {
