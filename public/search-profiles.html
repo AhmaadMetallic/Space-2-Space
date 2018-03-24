@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Space2Space|Available RoomMates</title>
+	<title>Space2Space|Search For A Roomate</title>
     <!--links-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- google fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:700|Roboto:400,400i,900|Signika:700" rel="stylesheet">
-
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -46,7 +46,7 @@
         <a class="nav-link" href="/about">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/login">Login</a>
+        <a class="nav-link" href="/search-profiles">Search for a Roomate</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/sign-up">Create a Profile</a>
@@ -360,7 +360,7 @@
   <option value="Bulgarian">Bulgarian</option>
   <option value="Catalan">Catalan</option>
   <option value="Cambodian">Cambodian</option>
-  <option value="Chinese (Mandarin)">Chinese (Mandarin)</option>
+  <option value="Chinese (Mandarin)">Chinese</option>
   <option value="Croation">Croation</option>
   <option value="Czech">Czech</option>
   <option value="Danish">Danish</option>
@@ -425,7 +425,7 @@
   <option value="Xhosa">Xhosa</option>
     </select>&nbsp;
   </div>
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin-top: 10px;">Search</button>
   </form>
 </div>
   <div id="map"></div>
@@ -440,11 +440,15 @@
         <p class="card-text" id="intro1"></p>
       </div>
       <ul class="list-group list-group-flush">
+        <li class="list-group-item" id="intro1"></li>
+        <li class="list-group-item" id="type1"></li>
+        <li class="list-group-item" id="gender1"></li>
+        <li class="list-group-item" id="stayLength1"></li>
         <li class="list-group-item" id="language1"></li>
         <li class="list-group-item" id="country1"></li>
         <li class="list-group-item" id="religion1"></li>
       </ul>
-      <div class="card-body" id="button1">
+			<i class="fa fa-heart fa-stack-1x" id="button1" aria-hidden="true" data-toggle="modal" data-target="#exampleModal"></i>
       </div>
     </div>
 		<div class="card" id="card2" style="width: 18rem;">
@@ -454,11 +458,15 @@
         <p class="card-text" id="intro2"></p>
       </div>
       <ul class="list-group list-group-flush">
+        <li class="list-group-item" id="intro2"></li>
+        <li class="list-group-item" id="type2"></li>
+        <li class="list-group-item" id="gender2"></li>
+        <li class="list-group-item" id="stayLength2"></li>
         <li class="list-group-item" id="language2"></li>
         <li class="list-group-item" id="country2"></li>
         <li class="list-group-item" id="religion2"></li>
       </ul>
-      <div class="card-body" id="button2">
+			<i class="fa fa-heart fa-stack-1x" id="button2" aria-hidden="true" data-toggle="modal" data-target="#exampleModal"></i>
       </div>
     </div>
 		<div class="card" id="card3" style="width: 18rem;">
@@ -468,13 +476,21 @@
         <p class="card-text" id="intro3"></p>
       </div>
       <ul class="list-group list-group-flush">
+        <li class="list-group-item" id="intro1"></li>
+        <li class="list-group-item" id="type3"></li>
+        <li class="list-group-item" id="gender3"></li>
+        <li class="list-group-item" id="stayLength3"></li>
         <li class="list-group-item" id="language3"></li>
         <li class="list-group-item" id="country3"></li>
         <li class="list-group-item" id="religion3"></li>
       </ul>
-      <div class="card-body" id="button3">
+			<i class="fa fa-heart fa-stack-1x" id="button3" aria-hidden="true" data-toggle="modal" data-target="#exampleModal"></i>
       </div>
     </div>
+  </div>
+</div>
+<div id="card-div">
+  <div class="card-deck">
 		<div class="card" id="card4" style="width: 18rem;">
       <div class="card-body">
         <h5 class="card-title" id="name4"></h5>
@@ -482,11 +498,15 @@
         <p class="card-text" id="intro4"></p>
       </div>
       <ul class="list-group list-group-flush">
+        <li class="list-group-item" id="intro4"></li>
+        <li class="list-group-item" id="type4"></li>
+        <li class="list-group-item" id="gender4"></li>
+        <li class="list-group-item" id="stayLength4"></li>
         <li class="list-group-item" id="language4"></li>
         <li class="list-group-item" id="country4"></li>
         <li class="list-group-item" id="religion4"></li>
       </ul>
-      <div class="card-body" id="button4">
+			<i class="fa fa-heart fa-stack-1x" id="button4" aria-hidden="true" data-toggle="modal" data-target="#exampleModal"></i>
       </div>
     </div>
 		<div class="card" id="card5" style="width: 18rem;">
@@ -496,11 +516,15 @@
         <p class="card-text" id="intro5"></p>
       </div>
       <ul class="list-group list-group-flush">
+        <li class="list-group-item" id="intro5"></li>
+        <li class="list-group-item" id="type5"></li>
+        <li class="list-group-item" id="gender5"></li>
+        <li class="list-group-item" id="stayLength5"></li>
         <li class="list-group-item" id="language5"></li>
         <li class="list-group-item" id="country5"></li>
         <li class="list-group-item" id="religion5"></li>
       </ul>
-      <div class="card-body" id="button5">
+			<i class="fa fa-heart fa-stack-1x" id="button5" aria-hidden="true" data-toggle="modal" data-target="#exampleModal"></i>
       </div>
     </div>
 		<div class="card" id="card6" style="width: 18rem;">
@@ -510,11 +534,15 @@
         <p class="card-text" id="intro6"></p>
       </div>
       <ul class="list-group list-group-flush">
+        <li class="list-group-item" id="intro6"></li>
+        <li class="list-group-item" id="type6"></li>
+        <li class="list-group-item" id="gender6"></li>
+        <li class="list-group-item" id="stayLength6"></li>
         <li class="list-group-item" id="language6"></li>
         <li class="list-group-item" id="country6"></li>
         <li class="list-group-item" id="religion6"></li>
       </ul>
-      <div class="card-body" id="button6">
+			<i class="fa fa-heart fa-stack-1x" id="button6" aria-hidden="true" data-toggle="modal" data-target="#exampleModal"></i>
       </div>
     </div>
   </div>
@@ -523,5 +551,6 @@
 </div>
 
 <script type="text/javascript" src="js/matches.js"></script>
+<script type="text/javascript" src="js/email.js"></script>
 </body>
 </html>
